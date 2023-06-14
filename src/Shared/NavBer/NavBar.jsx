@@ -18,7 +18,7 @@ const NavBar = () => {
     const navOptions = <>
 
     <li className="font-medium"><Link to='/'>Home</Link> </li>
-    <li className="font-medium"><Link to='/alltoys'>All Toys</Link> </li>
+    <li className="font-medium"><Link to='/alltoy'>All Toys</Link> </li>
     <li className="font-medium"><Link to='/addtoy'>Add Toy</Link> </li>
    
 
