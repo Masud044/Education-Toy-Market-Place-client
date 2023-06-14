@@ -1,6 +1,12 @@
+import { Link } from "react-router-dom";
+import useAllToy from "../../Hook/useAllToy";
 
 
 const AllToy = () => {
+
+     const [allToy] = useAllToy();
+
+       
     return (
         <div>
             <h1 className="text-3xl font-bold text-center text-fuchsia-700">All Toy</h1>
@@ -22,24 +28,29 @@ const AllToy = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        <tr>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                Zemlak, Daniel and Leannon
-                                <br />
-                                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-                            </td>
-                            <td>Purple</td>
-                            <th>
-                                <button className="btn btn-ghost btn-xs">details</button>
-                            </th>
-                        </tr>
+                        {
+                           allToy.map((item,index)=> <tr key={item._id}>
+                           <td>
+                                {index+1}
+                           </td>
+                           <td>
+                               {item.sellerName}
+                           </td>
+                           <td>
+                              {item.toyName}
+                           </td>
+                           <td>{item.subcategory}</td>
+                           <td>${item.price}</td>
+                           <td>{item.quantity}</td>
+                          
+                           <td>
+                           <Link to={`/singletoy/${item._id}`}> <button className="btn bg-fuchsia-800 text-white">View details </button></Link>
+                               
+                           
+                           </td>
+                       </tr> )
+                        }
+                       
                       
                     </tbody>
                    

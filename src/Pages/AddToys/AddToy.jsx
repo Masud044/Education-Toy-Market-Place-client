@@ -42,6 +42,30 @@ const AddToy = () => {
                     })
                 }
             })
+        // if(user && user.email){
+        //    const toyitem = {toyName ,image,sellerName,email:user?.email,quantity:parseFloat(quantity),price:parseFloat(price),rating:parseFloat( rating),subcategory,description }
+        //     fetch('http://localhost:5000/myToy',{
+        //         method: 'POST',
+        //         headers: {
+        //             'content-type': 'application/json'
+        //         },
+        //         body: JSON.stringify(toyitem)
+        //     })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log('after posting new menu item', data)
+        //         if (data.insertedId) {
+        //             reset();
+        //             Swal.fire({
+        //                 position: 'top-end',
+        //                 icon: 'success',
+        //                 title: 'Item added successfully',
+        //                 showConfirmButton: false,
+        //                 timer: 1500
+        //             })
+        //         }
+        //     })
+        // }
 
 }
 
