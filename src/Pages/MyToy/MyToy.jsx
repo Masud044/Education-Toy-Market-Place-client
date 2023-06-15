@@ -5,11 +5,31 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
 
+import { useQuery } from '@tanstack/react-query'
+
 
 
 const MyToy = () => {
 
-    const [toy,refetch] = useMyToy();
+    // const [toy,refetch] = useMyToy();
+    // const [toys,SetToys]=useState([]);
+    const [ascding,SetAscding] = useState(true);
+
+   const {user} = useContext(AuthContext);
+    const {refetch, data: toy = []  } = useQuery({
+       queryKey: ['mytoy', user?.email],
+       queryFn: async ()=>{
+            const res = await fetch(`http://localhost:5000/AllToy?email=${user?.email}&sort=${ascding ? 'asc' : 'desc'}`)
+            return res.json();
+       },
+     })
+    //  return [toy, refetch];
+
+    //  useEffect(()=>{
+    //      fetch(`http://localhost:5000/AllToy?sort=${ascding ? 'asc' : 'desc'}`)
+    //      .then(res=>res.json())
+    //      .then(data=>SetToys(data))
+    //  },[ascding])
 
     const handleDelete =id=>{
         Swal.fire({
@@ -43,8 +63,12 @@ const MyToy = () => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold text-center text-fuchsia-700">My Toy</h1>
+            <div className="text-center mt-10">
+            <h1 className="text-3xl font-bold mb-8 text-fuchsia-700">My Toy</h1>
+             <button className="rounded p-3 font-bold mb-4  bg-fuchsia-700 text-white"  onClick={()=>SetAscding(!ascding)}>{ascding? 'Ascending':'Descending'}</button>
 
+            </div>
+           
 
             <div className="overflow-x-auto">
                 <table className="table">
