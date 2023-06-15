@@ -4,7 +4,6 @@ import Gallary from "../Gallary/Gallary";
 import ShopCategory from "../ShopCategory/ShopCategory";
 import ExtraCategory from "../ExtraCategory/ExtraCategory";
 import ExtraSection from "../ExtraSection/ExtraSection";
-import ToyBlog from "../ToyBlogs/ToyBlog";
 
 
 
@@ -19,7 +18,7 @@ const Home = () => {
               <ShopCategory></ShopCategory>
               <ExtraCategory></ExtraCategory>
               <ExtraSection></ExtraSection>
-              <ToyBlog></ToyBlog>
+             
         </div>
     );
 };

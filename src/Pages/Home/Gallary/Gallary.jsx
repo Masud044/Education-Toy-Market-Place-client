@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import {Slide } from "react-awesome-reveal";
+
 import Aos from 'aos'
 import 'aos/dist/aos.css'
  
