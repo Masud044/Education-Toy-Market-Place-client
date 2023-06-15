@@ -1,13 +1,44 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useMyToy from "../../Hook/useMyToy";
+import Swal from "sweetalert2";
 
 
 
 
 const MyToy = () => {
 
-    const [toy] = useMyToy();
+    const [toy,refetch] = useMyToy();
+
+    const handleDelete =id=>{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/AllToy/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+
+    }
 
     return (
         <div>
@@ -64,7 +95,7 @@ const MyToy = () => {
 
                                 </td>
                                 <td>
-                                    <button className="btn bg-fuchsia-800 text-white">delete </button>
+                                    <button onClick={()=>handleDelete(item._id)} className="btn bg-fuchsia-800 text-white">delete </button>
 
                                 </td>
                             </tr>)
