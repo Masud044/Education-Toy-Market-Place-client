@@ -2,12 +2,14 @@ import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
 import { Link } from 'react-router-dom';
+import {Slide } from "react-awesome-reveal";
 
 
 const ToyCategory = ({item}) => {
     const {image,toyName,price,rating,_id}=item
     return (
-        <div className="card w-96 bg-fuchsia-300 p-4 shadow-xl">
+         <Slide>
+         <div className="card w-96 bg-fuchsia-300 p-4 shadow-xl">
         <figure><img src={image} alt="Shoes" /></figure>
         <div className="card-body">
        
@@ -26,6 +28,8 @@ const ToyCategory = ({item}) => {
           </div>
         </div>
       </div>
+         </Slide>
+       
     );
 };
 
