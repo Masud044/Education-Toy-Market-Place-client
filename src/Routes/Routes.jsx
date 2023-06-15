@@ -10,6 +10,7 @@ import SingleToy from "../Pages/SingleToy/SingleToy";
 import UpdateToy from "../Pages/MyToy/UpdateToy";
 import Blog from "../Pages/Blog/Blog";
 import NotFound from "../Pages/NotFound/NotFound";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
    {
@@ -40,7 +41,7 @@ export const router = createBrowserRouter([
          },
          {
             path:'singletoy/:id',
-            element:<SingleToy></SingleToy>
+            element:<PrivateRoute><SingleToy></SingleToy></PrivateRoute>
          },
          {
             path:'updatetoy/:id',

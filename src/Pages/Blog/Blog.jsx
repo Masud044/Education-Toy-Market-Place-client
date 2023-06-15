@@ -1,8 +1,10 @@
+import { Helmet } from "react-helmet-async";
 
 
 const Blog = () => {
     return (
         <div className="mt-10">
+            <Helmet><title>Eduvalt|Blog</title></Helmet>
             <div className=" border-2 border-fuchsia-800 p-4">
                 <h1 className="font-bold text-fuchsia-600 mb-4">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>
                 <p>The authorization code flow is the most common and secure way to obtain access and refresh tokens from an authorization server, making it suitable for web applications that can securely store the client credentials and communicate with the server via back-end channels. This process involves four steps: the client redirects the user to the authorization server, requests an authorization code with the desired scope and a refresh token, user authenticates and consents to the scope, and the server returns an authorization code to the client via a redirect URI. Then, the client exchanges the authorization code for an access token and a refresh token using its credentials and code. Finally, the client uses the access token to access the protected resources until it expires, and then uses the refresh token to request a new access token.The implicit flow is a simplified version of the authorization code flow which does not require the client to exchange an authorization code for an access token. This flow is suitable for single-page applications or mobile apps which cannot store the client credentials or use back-end channels. It consists of two steps: first, the client redirects the user to the authorization server and requests an access token with the desired scope; second, after the user authenticates and consents to the scope, the server returns an access token to the client via a redirect URI</p>

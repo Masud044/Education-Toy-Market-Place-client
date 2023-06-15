@@ -1,19 +1,16 @@
-import { useContext, useEffect, useState } from "react";
-import { Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
+import {  useEffect, useState } from "react";
+import {  useParams } from "react-router-dom";
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
-import { AuthContext } from "../../Provider/AuthProvider";
-import Swal from "sweetalert2";
+
 
 
 
 const SingleToy = () => {
    
     const { id } = useParams();
-    const {user} = useContext(AuthContext);
    
-    const location = useLocation();
     
    
     
@@ -31,9 +28,7 @@ const SingleToy = () => {
             })
     }, [singleToy,loading,id])
 
-    if(!user && !user?.email){
-        return <Navigate to="/login" state={{from: location}} replace></Navigate>
-    }
+   
    
 
 

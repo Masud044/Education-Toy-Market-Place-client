@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext,useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import useMyToy from "../../Hook/useMyToy";
+
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
@@ -12,8 +12,7 @@ import { Helmet } from "react-helmet-async";
 
 const MyToy = () => {
 
-    // const [toy,refetch] = useMyToy();
-    // const [toys,SetToys]=useState([]);
+   
     const [ascding,SetAscding] = useState(true);
 
    const {user} = useContext(AuthContext);
@@ -24,14 +23,7 @@ const MyToy = () => {
             return res.json();
        },
      })
-    //  return [toy, refetch];
-
-    //  useEffect(()=>{
-    //      fetch(`http://localhost:5000/AllToy?sort=${ascding ? 'asc' : 'desc'}`)
-    //      .then(res=>res.json())
-    //      .then(data=>SetToys(data))
-    //  },[ascding])
-
+    
     const handleDelete =id=>{
         Swal.fire({
             title: 'Are you sure?',
