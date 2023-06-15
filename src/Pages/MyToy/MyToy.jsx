@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useMyToy from "../../Hook/useMyToy";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 
@@ -91,7 +92,7 @@ const MyToy = () => {
                                 <td>{item.quantity}</td>
 
                                 <td>
-                                    <button className="btn bg-fuchsia-800 text-white">update </button>
+                                   <Link to={`/updatetoy/${item._id}`}><button className="btn bg-fuchsia-800 text-white">update </button></Link> 
 
                                 </td>
                                 <td>
