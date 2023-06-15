@@ -1,13 +1,21 @@
 
 import './Extrasection.css'
-import {Slide } from "react-awesome-reveal";
+
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 const ExtraSection = () => {
+
+    useEffect(()=>{
+        Aos.init({duration:3000});
+    },[])
     return (
         <div>
               <h1 className="text-center font-bold text-fuchsia-800 text-3xl mb-8 mt-8">Our Blog</h1>
-              <Slide>
+           
 
-              <div className="image-item bg-fixed text-white pt-8 my-20">
+              <div className="image-item bg-fixed text-white pt-8 my-20" data-aos="zoom-in">
             <div className="md:flex justify-center items-center bg-fuchsia-500 bg-opacity-50 pb-20 pt-12 px-36">
                 <div>
                     <img className='h-80 w-100'  src="https://i.ibb.co/z4TGcBn/images-9.jpg" alt="" />
@@ -21,7 +29,7 @@ const ExtraSection = () => {
                 </div>
             </div>
         </div>
-              </Slide>
+          
 
              
 
