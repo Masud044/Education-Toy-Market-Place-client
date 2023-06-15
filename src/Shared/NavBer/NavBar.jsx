@@ -19,8 +19,26 @@ const NavBar = () => {
 
     <li className="font-medium"><Link to='/'>Home</Link> </li>
     <li className="font-medium"><Link to='/alltoy'>All Toys</Link> </li>
-    <li className="font-medium"><Link to='/addtoy'>Add Toy</Link> </li>
-    <li className="font-medium"><Link to='/mytoy'>My Toy</Link> </li>
+    <li className="font-medium"><Link to='/blog'>Blog</Link> </li>
+    {
+        user? <>
+         <li className="font-medium"><Link to='/addtoy'>Add Toy</Link> </li>
+        </>
+        :
+        <>
+        </>
+    }
+     {
+        user? <>
+         <li className="font-medium"><Link to='/mytoy'>My Toy</Link> </li>
+        </>
+        :
+        <>
+        </>
+    }
+   
+   
+   
    
 
     

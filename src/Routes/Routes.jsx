@@ -8,8 +8,14 @@ import AllToy from "../Pages/AllToy/AllToy";
 import MyToy from "../Pages/MyToy/MyToy";
 import SingleToy from "../Pages/SingleToy/SingleToy";
 import UpdateToy from "../Pages/MyToy/UpdateToy";
+import Blog from "../Pages/Blog/Blog";
+import NotFound from "../Pages/NotFound/NotFound";
 
 export const router = createBrowserRouter([
+   {
+       path:'*',
+       element:<NotFound></NotFound>
+   },
     
      {
        path: "/",
@@ -39,6 +45,10 @@ export const router = createBrowserRouter([
          {
             path:'updatetoy/:id',
             element:<UpdateToy></UpdateToy>
+         },
+         {
+            path:'blog',
+            element:<Blog></Blog>
          },
          {
             path:'login',

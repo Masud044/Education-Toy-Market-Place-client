@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 
 import { useQuery } from '@tanstack/react-query'
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -63,6 +64,7 @@ const MyToy = () => {
 
     return (
         <div>
+             <Helmet><title>Educavalt| MyToy</title></Helmet>
             <div className="text-center mt-10">
             <h1 className="text-3xl font-bold mb-8 text-fuchsia-700">My Toy</h1>
              <button className="rounded p-3 font-bold mb-4  bg-fuchsia-700 text-white"  onClick={()=>SetAscding(!ascding)}>{ascding? 'Ascending':'Descending'}</button>

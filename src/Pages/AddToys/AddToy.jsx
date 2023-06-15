@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -47,6 +48,7 @@ const AddToy = () => {
 
 return (
     <div className="">
+        <Helmet><title>Educavalt| AddToy</title></Helmet>
         <h1 className="text-3xl font-bold text-center text-fuchsia-700">Add Toy</h1>
 
         <form className="mt-20 bg-fuchsia-300 p-4 rounded-lg" onSubmit={handleSubmit(onSubmit)}>
