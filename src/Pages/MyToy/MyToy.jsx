@@ -19,10 +19,11 @@ const MyToy = () => {
     const {refetch, data: toy = []  } = useQuery({
        queryKey: ['mytoy', user?.email],
        queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/AllToy?email=${user?.email}&sort=${ascding ? 'asc' : 'desc'}`)
+            const res = await fetch(`http://localhost:5000/AllToy?email=${user?.email}&sort=${ascding ? 'asc' : 'dsc'}`)
             return res.json();
        },
      })
+     console.log(ascding)
     
     const handleDelete =id=>{
         Swal.fire({

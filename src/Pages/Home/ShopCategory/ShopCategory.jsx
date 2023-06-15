@@ -27,7 +27,7 @@ const ShopCategory = () => {
                 <TabPanel>
                     <div className="md:flex justify-center items-center mt-4 gap-8">
                     {
-                        MathToy.slice(0,2).map(item=> <ToyCategory key={item._id}
+                        MathToy.slice(0,3).map(item=> <ToyCategory key={item._id}
                              item={item}
                              ></ToyCategory>)
                     }
@@ -38,7 +38,7 @@ const ShopCategory = () => {
                 <TabPanel>
                 <div className="md:flex justify-center items-center mt-4 gap-8">
                     {
-                        LanguageToy.slice(0,2).map(item=> <ToyCategory key={item._id}
+                        LanguageToy.slice(0,3).map(item=> <ToyCategory key={item._id}
                              item={item}
                              ></ToyCategory>)
                     }
@@ -47,7 +47,7 @@ const ShopCategory = () => {
                 <TabPanel>
                 <div className="md:flex justify-center items-center mt-4 gap-8">
                     {
-                        EngineerToy.slice(0,2).map(item=> <ToyCategory key={item._id}
+                        EngineerToy.slice(0,3).map(item=> <ToyCategory key={item._id}
                              item={item}
                              ></ToyCategory>)
                     }
