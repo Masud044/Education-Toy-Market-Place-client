@@ -17,12 +17,12 @@ const NavBar = () => {
 
     const navOptions = <>
 
-    <li className="font-medium"><Link to='/'>Home</Link> </li>
-    <li className="font-medium"><Link to='/alltoy'>All Toys</Link> </li>
-    <li className="font-medium"><Link to='/blog'>Blog</Link> </li>
+    <li className="font-bold "><Link to='/'>Home</Link> </li>
+    <li className="font-bold "><Link to='/alltoy'>All Toys</Link> </li>
+    <li className="font-bold "><Link to='/blog'>Blog</Link> </li>
     {
         user? <>
-         <li className="font-medium"><Link to='/addtoy'>Add Toy</Link> </li>
+         <li className="font-bold "><Link to='/addtoy'>Add Toy</Link> </li>
         </>
         :
         <>
@@ -30,7 +30,7 @@ const NavBar = () => {
     }
      {
         user? <>
-         <li className="font-medium"><Link to='/mytoy'>My Toy</Link> </li>
+         <li className="font-bold "><Link to='/mytoy'>My Toy</Link> </li>
         </>
         :
         <>
@@ -41,9 +41,9 @@ const NavBar = () => {
 
 </>
     return (
-        <div className="container mx-auto">
+        <div className="container  mx-auto">
 
-        <div className="navbar   z-10 bg-opacity-30 max-w-screen-xl text-white bg-fuchsia-500">
+        <div className="navbar fixed z-10  bg-opacity-30 max-w-screen-xl text-white bg-fuchsia-500">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const NavBar = () => {
                 <img className="h-10 font-extrabold" src="https://i.ibb.co/172yv0h/logo.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu absolute menu-horizontal px-1">
                     {navOptions}
                 </ul>
             </div>

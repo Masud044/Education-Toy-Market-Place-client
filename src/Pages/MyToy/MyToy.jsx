@@ -62,8 +62,9 @@ const MyToy = () => {
 
     return (
         <div>
+            <h1 className="">My Toy</h1>
              <Helmet><title>Educavalt| MyToy</title></Helmet>
-            <div className="text-center mt-10">
+            <div className="text-center mt-20 ">
             <h1 className="text-3xl font-bold mb-8 text-fuchsia-700">My Toy</h1>
              <button className="rounded p-3 font-bold mb-4  bg-fuchsia-700 text-white"  onClick={()=>SetAscding(!ascding)}>{ascding? 'Ascending':'Descending'}</button>
 
