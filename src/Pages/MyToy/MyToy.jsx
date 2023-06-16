@@ -2,7 +2,7 @@ import { useContext,useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 import Swal from "sweetalert2";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 import { useQuery } from '@tanstack/react-query'
@@ -11,16 +11,12 @@ import { Helmet } from "react-helmet-async";
 
 
 const MyToy = () => {
-
-   
     const [ascding,SetAscding] = useState(true);
-    const navigate=useNavigate();
+   
 
    const {user} = useContext(AuthContext);
 
-       if(!user){
-         return navigate('/')
-       }
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const {refetch, data: toy = []  } = useQuery({
        queryKey: ['mytoy', user?.email],
        queryFn: async ()=>{
@@ -28,7 +24,7 @@ const MyToy = () => {
             return res.json();
        },
      })
-     console.log(ascding)
+    
     
     const handleDelete =id=>{
         Swal.fire({
@@ -64,7 +60,7 @@ const MyToy = () => {
         <div>
             <h1 className="">My Toy</h1>
              <Helmet><title>Educavalt| MyToy</title></Helmet>
-            <div className="text-center mt-20 ">
+            <div className="text-center mt-20 mb-10 ">
             <h1 className="text-3xl font-bold mb-8 text-fuchsia-700">My Toy</h1>
              <button className="rounded p-3 font-bold mb-4  bg-fuchsia-700 text-white"  onClick={()=>SetAscding(!ascding)}>{ascding? 'Ascending':'Descending'}</button>
 

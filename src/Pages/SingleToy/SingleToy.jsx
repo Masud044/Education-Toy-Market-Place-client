@@ -33,8 +33,9 @@ const SingleToy = () => {
 
 
     return (
-        <div className="mt-20 mb-20">
-            <div className="card lg:card-side bg-fuchsia-300 shadow-2xl">
+        <div className="">
+            <h1 className="text-center ">single toy</h1>
+            <div className="card lg:card-side bg-fuchsia-300 shadow-2xl mt-20 mb-10">
                 <figure><img src={singleToy.image} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Toy Name:{singleToy.toyName}</h2>

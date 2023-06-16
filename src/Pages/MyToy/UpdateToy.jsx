@@ -52,7 +52,7 @@ const UpdateToy = () => {
         <div className="">
         <h1 className="text-3xl font-bold text-center text-fuchsia-700">Update Toy</h1>
 
-        <form className="mt-20 bg-fuchsia-300 p-4 rounded-lg" onSubmit={handleSubmit(onSubmit)}>
+        <form className="mt-20 mb-20 bg-fuchsia-300 p-4 rounded-lg" onSubmit={handleSubmit(onSubmit)}>
 
 
             <div className="grid grid-cols-2 gap-4">
