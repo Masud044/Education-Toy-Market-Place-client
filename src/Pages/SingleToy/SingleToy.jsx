@@ -33,7 +33,7 @@ const SingleToy = () => {
 
 
     return (
-        <div className="mt-20">
+        <div className="mt-20 mb-20">
             <div className="card lg:card-side bg-fuchsia-300 shadow-2xl">
                 <figure><img src={singleToy.image} alt="Album" /></figure>
                 <div className="card-body">

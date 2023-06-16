@@ -2,7 +2,7 @@ import { useContext,useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 import { useQuery } from '@tanstack/react-query'
@@ -14,12 +14,17 @@ const MyToy = () => {
 
    
     const [ascding,SetAscding] = useState(true);
+    const navigate=useNavigate();
 
    const {user} = useContext(AuthContext);
+
+       if(!user){
+         return navigate('/')
+       }
     const {refetch, data: toy = []  } = useQuery({
        queryKey: ['mytoy', user?.email],
        queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/AllToy?email=${user?.email}&sort=${ascding ? 'asc' : 'dsc'}`)
+            const res = await fetch(`http://localhost:5000/mytoy?email=${user?.email}&sort=${ascding ? 'asc' : 'dsc'}`)
             return res.json();
        },
      })

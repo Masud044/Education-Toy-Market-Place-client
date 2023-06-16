@@ -18,7 +18,7 @@ const AllToy = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/AllToy?search=${search}`)
+        fetch(`http://localhost:5000/alToy?search=${search}`)
             .then(res => res.json())
             .then(data => {
                 setAllToy(data);

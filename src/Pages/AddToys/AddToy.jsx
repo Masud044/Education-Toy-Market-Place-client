@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,6 +13,12 @@ const AddToy = () => {
 
 
     const { user } = useContext(AuthContext);
+
+     const navigate = useNavigate();
+
+       if(!user){
+         return navigate('/')
+       }
 
     const onSubmit = data => {
 
