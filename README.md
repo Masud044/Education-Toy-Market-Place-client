@@ -1,67 +1,47 @@
-﻿# b7a11-toy-marketplace-client-side-Masud044
- 
- 
-# Project Title
+## Education Toy Market Place
+Education Toy Market Place is an online toy marketplace that offers a wide range of educational toys for children.
 
-Educational Tot
-
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-
-```
-````
-Firebase
-````
+# Features
+- Browse and search for a variety of educational toys.
+- Detailed product information and images.
+- Secure user authentication using firebase.
+- My Toys and Add A Toy route will be visible after login.
+- User can add a product and also can update & delete his product.
+- Interactive and engaging learning experiences.
+- User-friendly interface.
+- Accessible on various devices (desktop, tablet, mobile).
 
 
+## Server Side Repository
+Click here for the server side repo -> https://github.com/Masud044/Education-Toy-Market-Place-server
 
-## Documentation
+## Technologies Used
+- Vite-React
+- React Router Dom v6.10.0
+- Tailwindcss
+- Daisyui
+- Firebase
+- ExpressJs
+- MongoDB
+- SwiperJs
+- AOS
+-Sweet Alert 2
 
-[Documentation](https://reactrouter.com/en/main)
-[Documentation](https://react.dev/)
+## Getting Started
+Follow these instructions to get a local copy of the Educational Toy Market Place website up and running on your machine for development and testing purposes:
 
+1. Clone the repository: git clone repository-link
 
-## Server-Site:
-https://github.com/Masud044/Education-Toy-Market-Place-server
+2. Install the dependencies: npm
 
-## Environment Variables
+3. Set up environment variables: Create a .env file in the root directory. Define the necessary environment variables (e.g., database connection string, API keys, etc.) in the .env file.
 
-To run this project, you will need to add the following environment variables to your .env file
+4. Start the development server: npm run dev
+Deployment
+To deploy the Educational Toy Market Place to a production environment, follow the deployment instructions specific to your hosting platform (e.g., vercel, Firebase, Render etc.).
 
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-
-## Features
-
-- User input: Allow users to enter their child's age and select specific learning objectives or developmental areas.
-- Recommendation algorithm: Analyze user inputs and match them with appropriate educational toys from a toy database.
-- Toy database: Maintain a comprehensive database of educational toys with information such as name, description, age range, learning objectives, price, and reviews.
-- Personalized recommendations: Generate customized toy recommendations based on the child's age and selected learning objectives.
-- Toy details: Display detailed information about each recommended toy, including images, descriptions, educational benefits, and customer reviews.
-- Filtering and sorting: Provide options to filter and sort toy recommendations by price range, category, brand, or customer ratings.
-- User feedback and reviews: Allow users to leave feedback and reviews for purchased toys to assist others in making informed decisions.
-- Wishlist and purchase integration: Enable users to create wishlists and seamlessly purchase recommended toys from trusted online retailers.
-
-
-
-## Installation
-
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
-```bash
-  npm install firebase
-  npm i react and others
+Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 ```
 Live Link Website
 https://assignment-11-client-sit-276f5.web.app/
